@@ -1,10 +1,11 @@
-# HTML Travel Projects
+# HTML Web Projects
 
-旅行系Webサイトをまとめて置くためのリポジトリです。
+HTML/CSS/JavaScriptで作ったWebサイトをまとめて置くためのリポジトリです。
 
 ## Projects
 
 - [Japan Prefecture Travel MVP](./japan-prefecture-travel-mvp/)
+- [Fixed Cost Reset Site](./fixed-cost-reset-site/)
 
 ## Structure
 
@@ -12,6 +13,11 @@
 html-traval/
   index.html
   README.md
+  fixed-cost-reset-site/
+    index.html
+    styles.css
+    app.js
+    README.md
   japan-prefecture-travel-mvp/
     index.html
     styles.css
