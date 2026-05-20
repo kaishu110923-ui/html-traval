@@ -34,9 +34,9 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
   gap: 18px;
   min-height: 68px;
   padding: 14px clamp(18px, 4vw, 56px);
@@ -78,6 +78,29 @@ nav a {
 
 nav a:hover {
   color: var(--red);
+}
+
+.language-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.language-select select {
+  min-height: 38px;
+  max-width: 180px;
+  padding: 7px 30px 7px 10px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 800;
+  text-transform: none;
 }
 
 .hero {
@@ -353,11 +376,22 @@ footer p {
   .site-header {
     position: static;
     align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   nav {
     justify-content: flex-start;
+  }
+
+  .language-select {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .language-select select {
+    width: 100%;
+    max-width: none;
   }
 
   .hero {

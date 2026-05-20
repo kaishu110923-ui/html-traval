@@ -14,49 +14,60 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" data-i18n="brand">
         <span>日</span>
         Japan Prefecture Picks
       </a>
       <nav aria-label="Main navigation">
-        <a href="#prefectures">Prefectures</a>
-        <a href="#how-to-use">How to use</a>
+        <a href="#prefectures" data-i18n="navPrefectures">Prefectures</a>
+        <a href="#how-to-use" data-i18n="navHow">How to use</a>
       </nav>
+      <label class="language-select">
+        <span data-i18n="languageLabel">Language</span>
+        <select id="languageSelect" aria-label="Language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh">中文</option>
+          <option value="ko">한국어</option>
+          <option value="fr">Français</option>
+          <option value="it">Italiano</option>
+        </select>
+      </label>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Japan travel ideas for international visitors</p>
-          <h1>One recommended travel spot for every prefecture in Japan.</h1>
-          <p>
+          <p class="eyebrow" data-i18n="heroEyebrow">Japan travel ideas for international visitors</p>
+          <h1 data-i18n="heroTitle">One recommended travel spot for every prefecture in Japan.</h1>
+          <p data-i18n="heroText">
             Start with a simple map of ideas. Search by region, season, food, temples, islands, snow, castles, hot
             springs, or nature, then turn the best-performing destinations into full travel guides later.
           </p>
-          <a class="hero-button" href="#prefectures">Browse 47 picks</a>
+          <a class="hero-button" href="#prefectures" data-i18n="heroButton">Browse 47 picks</a>
         </div>
       </section>
 
       <section class="summary-strip" aria-label="Site summary">
         <div>
           <strong>47</strong>
-          <span>prefectures covered</span>
+          <span data-i18n="summaryPrefectures">prefectures covered</span>
         </div>
         <div>
           <strong>8</strong>
-          <span>regions to filter</span>
+          <span data-i18n="summaryRegions">regions to filter</span>
         </div>
         <div>
           <strong>1</strong>
-          <span>simple spot per prefecture</span>
+          <span data-i18n="summarySpot">simple spot per prefecture</span>
         </div>
       </section>
 
       <section class="section" id="prefectures">
         <div class="section-heading">
-          <p class="eyebrow">Travel picker</p>
-          <h2>Find a prefecture worth adding to your Japan trip.</h2>
-          <p>
+          <p class="eyebrow" data-i18n="pickerEyebrow">Travel picker</p>
+          <h2 data-i18n="pickerTitle">Find a prefecture worth adding to your Japan trip.</h2>
+          <p data-i18n="pickerText">
             This MVP keeps each recommendation short. The goal is to learn which prefectures attract clicks before
             building deeper hotel, itinerary, transport, and activity pages.
           </p>
@@ -75,7 +86,7 @@
             <button class="region-button" type="button" data-region="kyushu">Kyushu + Okinawa</button>
           </div>
           <label class="search-box">
-            <span>Search</span>
+            <span data-i18n="searchLabel">Search</span>
             <input id="prefectureSearch" type="search" placeholder="Try Fuji, onsen, food, island..." />
           </label>
         </div>
@@ -86,35 +97,35 @@
 
       <section class="section monetization" id="how-to-use">
         <div class="section-heading">
-          <p class="eyebrow">MVP next step</p>
-          <h2>If people click, expand only what proves demand.</h2>
-          <p>
+          <p class="eyebrow" data-i18n="nextEyebrow">MVP next step</p>
+          <h2 data-i18n="nextTitle">If people click, expand only what proves demand.</h2>
+          <p data-i18n="nextText">
             After publishing, track which prefectures and keywords get attention. Then add detailed pages for those
             destinations first.
           </p>
         </div>
         <div class="next-grid">
           <article>
-            <h3>First expansion</h3>
-            <p>Build detail pages for the top 5 clicked prefectures with 1-day and 3-day itineraries.</p>
+            <h3 data-i18n="nextCard1Title">First expansion</h3>
+            <p data-i18n="nextCard1Text">Build detail pages for the top 5 clicked prefectures with 1-day and 3-day itineraries.</p>
           </article>
           <article>
-            <h3>Useful revenue paths</h3>
-            <p>Add natural links for hotels, eSIM, Wi-Fi, rail passes, local tours, and travel insurance.</p>
+            <h3 data-i18n="nextCard2Title">Useful revenue paths</h3>
+            <p data-i18n="nextCard2Text">Add natural links for hotels, eSIM, Wi-Fi, rail passes, local tours, and travel insurance.</p>
           </article>
           <article>
-            <h3>Keep it safe</h3>
-            <p>Do not overfill the page with ads. Prioritize readable travel advice and official source checks.</p>
+            <h3 data-i18n="nextCard3Title">Keep it safe</h3>
+            <p data-i18n="nextCard3Text">Do not overfill the page with ads. Prioritize readable travel advice and official source checks.</p>
           </article>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Japan Prefecture Picks</p>
-      <p>Simple MVP for testing interest in prefecture-based Japan travel recommendations.</p>
+      <p data-i18n="footerBrand">Japan Prefecture Picks</p>
+      <p data-i18n="footerText">Simple MVP for testing interest in prefecture-based Japan travel recommendations.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=language-1"></script>
   </body>
 </html>
