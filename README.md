@@ -1,28 +1,22 @@
-# Japan Prefecture Travel MVP
+# HTML Travel Projects
 
-外国人旅行者向けに、47都道府県それぞれのおすすめスポットを1つずつ紹介する軽量MVPサイトです。
+旅行系Webサイトをまとめて置くためのリポジトリです。
 
-## 目的
+## Projects
 
-最初から大きな旅行メディアを作り込まず、どの都道府県・テーマに反応があるかを確認するためのテスト版です。
+- [Japan Prefecture Travel MVP](./japan-prefecture-travel-mvp/)
 
-## ファイル
+## Structure
 
-- `index.html`: 1ページサイト本体
-- `styles.css`: レイアウトとデザイン
-- `script.js`: 47都道府県データ、地域フィルター、検索
+```text
+html-traval/
+  index.html
+  README.md
+  japan-prefecture-travel-mvp/
+    index.html
+    styles.css
+    script.js
+    README.md
+```
 
-## 検証したいこと
-
-- どの都道府県がクリックされるか
-- どの検索語が使われるか
-- 外国人向けに「prefecture-based Japan travel guide」が刺さるか
-- 詳細記事化すべき地域が見えるか
-
-## 次に追加する候補
-
-- 都道府県カードの詳細ページ
-- ホテル予約導線
-- eSIM、Wi-Fi、交通パス導線
-- 1日・3日モデルコース
-- 季節別おすすめ記事
+今後、新しいWebサイトを追加するときは、ルート直下に新しいフォルダーを作って入れます。
