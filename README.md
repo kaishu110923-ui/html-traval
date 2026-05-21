@@ -1,11 +1,10 @@
-# HTML Web Projects
+# Japan Travel Guides
 
-HTML/CSS/JavaScriptで作ったWebサイトをまとめて置くためのリポジトリです。
+訪日旅行者向けの日本旅行ガイドを置くためのリポジトリです。
 
 ## Projects
 
 - [Japan Prefecture Travel Guide](./japan-prefecture-travel-mvp/)
-- [Fixed Cost Reset Site](./fixed-cost-reset-site/)
 
 ## Structure
 
@@ -13,11 +12,6 @@ HTML/CSS/JavaScriptで作ったWebサイトをまとめて置くためのリポ�
 html-traval/
   index.html
   README.md
-  fixed-cost-reset-site/
-    index.html
-    styles.css
-    app.js
-    README.md
   japan-prefecture-travel-mvp/
     index.html
     styles.css
@@ -25,4 +19,4 @@ html-traval/
     README.md
 ```
 
-今後、新しいWebサイトを追加するときは、ルート直下に新しいフォルダーを作って入れます。
+AdSense審査ではドメイン全体が確認されるため、公開ページは旅行ガイドとして価値のある本文を持つ構成にしています。

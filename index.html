@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A collection of simple HTML web projects."
+      content="A multilingual Japan travel guide for international visitors, featuring prefecture recommendations, route ideas, planning notes and travel manners."
     />
-    <title>HTML Web Projects</title>
+    <title>Japan Travel Guides for International Visitors</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1375359131271370"
+     crossorigin="anonymous"></script>
     <style>
       :root {
         --ink: #17201d;
@@ -17,10 +19,15 @@
         --line: #ded8cc;
         --red: #b83b35;
         --blue: #235a70;
+        --green: #55725d;
       }
 
       * {
         box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
@@ -31,11 +38,73 @@
         line-height: 1.55;
       }
 
-      main {
-        min-height: 100vh;
+      a {
+        color: inherit;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 16px clamp(20px, 5vw, 72px);
+        background: rgba(248, 245, 239, 0.95);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .brand span {
         display: grid;
-        align-content: center;
-        padding: clamp(24px, 6vw, 72px);
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        color: #fff;
+        background: var(--red);
+        border-radius: 50%;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 16px;
+        color: var(--muted);
+        font-weight: 800;
+      }
+
+      nav a {
+        text-decoration: none;
+      }
+
+      main {
+        display: grid;
+      }
+
+      .hero,
+      .section {
+        padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 72px);
+      }
+
+      .hero {
+        min-height: 72vh;
+        display: grid;
+        align-content: end;
+        color: #fff;
+        background:
+          linear-gradient(180deg, rgba(11, 18, 20, 0.18), rgba(11, 18, 20, 0.78)),
+          url("https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1800&q=80") center/cover;
+      }
+
+      .hero-inner,
+      .section-heading {
+        max-width: 820px;
       }
 
       .eyebrow {
@@ -47,85 +116,222 @@
         text-transform: uppercase;
       }
 
+      .hero .eyebrow {
+        color: #ffd79b;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        overflow-wrap: anywhere;
+      }
+
       h1 {
-        max-width: 780px;
+        max-width: 820px;
         margin: 0;
-        font-size: clamp(2.8rem, 7vw, 6rem);
+        font-size: clamp(2.8rem, 7vw, 6.2rem);
         line-height: 0.98;
         letter-spacing: 0;
       }
 
-      .intro {
-        max-width: 680px;
-        margin: 22px 0 34px;
-        color: var(--muted);
+      h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 4rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .hero p:not(.eyebrow),
+      .section-heading p {
+        color: rgba(255, 255, 255, 0.9);
         font-size: 1.08rem;
       }
 
-      .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 18px;
-        max-width: 980px;
+      .section-heading p {
+        color: var(--muted);
       }
 
-      .project-card {
+      .hero-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        margin-top: 18px;
+        padding: 12px 18px;
+        color: var(--ink);
+        background: #fff;
+        border-radius: 4px;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .guide-grid,
+      .article-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .guide-card,
+      .article-card {
         display: grid;
         gap: 12px;
-        min-height: 210px;
+        min-height: 230px;
         padding: 24px;
         color: inherit;
         background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 8px;
         text-decoration: none;
-        box-shadow: 0 8px 24px rgba(31, 43, 40, 0.06);
+        box-shadow: 0 8px 24px rgba(31, 43, 40, 0.05);
       }
 
-      .project-card:hover {
-        border-color: var(--blue);
-      }
-
-      .project-card span {
+      .guide-card span,
+      .article-card span {
         color: var(--blue);
-        font-size: 0.82rem;
+        font-size: 0.78rem;
         font-weight: 900;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
       }
 
-      .project-card h2 {
+      .guide-card h3,
+      .article-card h3 {
         margin: 0;
-        font-size: 1.4rem;
+        font-size: 1.35rem;
         line-height: 1.15;
       }
 
-      .project-card p {
+      .guide-card p,
+      .article-card p {
         margin: 0;
         color: var(--muted);
+      }
+
+      .note-section {
+        background: #e8efe9;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 28px clamp(20px, 5vw, 72px);
+        color: rgba(255, 255, 255, 0.76);
+        background: #15201f;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 900px) {
+        header,
+        footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        nav {
+          justify-content: flex-start;
+        }
+
+        .guide-grid,
+        .article-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <p class="eyebrow">HTML web collection</p>
-      <h1>HTML Web Projects</h1>
-      <p class="intro">
-        A simple home for HTML web experiments. Each site lives in its own clearly named folder so more projects can be
-        added cleanly over time.
-      </p>
+    <header>
+      <a class="brand" href="./">
+        <span>日</span>
+        Japan Travel Guides
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#guides">Guides</a>
+        <a href="#planning">Planning</a>
+        <a href="./japan-prefecture-travel-mvp/">47 Prefectures</a>
+      </nav>
+    </header>
 
-      <div class="project-grid">
-        <a class="project-card" href="./japan-prefecture-travel-mvp/">
-          <span>Live project</span>
-          <h2>Japan Prefecture Travel Guide</h2>
-          <p>A multilingual guide to all 47 prefectures of Japan, with route ideas, search and region filters.</p>
-        </a>
-        <a class="project-card" href="./fixed-cost-reset-site/">
-          <span>MVP site</span>
-          <h2>Fixed Cost Reset Site</h2>
-          <p>A Japanese fixed-cost review landing page with a 3-minute diagnosis, CTA tracking, and signup intent test.</p>
-        </a>
-      </div>
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">Independent Japan travel planning</p>
+          <h1>Practical Japan travel guides for international visitors.</h1>
+          <p>
+            Start with prefecture-by-prefecture ideas, then use route notes, seasonal planning and local manners to
+            build a trip that is easier to navigate and more respectful to the places you visit.
+          </p>
+          <a class="hero-button" href="./japan-prefecture-travel-mvp/">Open the 47 prefecture guide</a>
+        </div>
+      </section>
+
+      <section class="section" id="guides">
+        <div class="section-heading">
+          <p class="eyebrow">Main guide</p>
+          <h2>Explore Japan beyond one standard route.</h2>
+          <p>
+            The current guide covers all 47 prefectures, with one recommended spot for each, search by theme, region
+            filters, multilingual UI and planning notes for visitors.
+          </p>
+        </div>
+        <div class="guide-grid">
+          <a class="guide-card" href="./japan-prefecture-travel-mvp/">
+            <span>Multilingual guide</span>
+            <h3>Japan Prefecture Travel Guide</h3>
+            <p>One useful travel idea for every prefecture, plus route ideas and practical booking reminders.</p>
+          </a>
+          <article class="guide-card">
+            <span>Route planning</span>
+            <h3>Classic, culture and nature routes</h3>
+            <p>Choose between first-visit city routes, slower culture routes and nature-focused add-ons.</p>
+          </article>
+          <article class="guide-card">
+            <span>Visitor support</span>
+            <h3>Languages and search</h3>
+            <p>Switch between English, Japanese, Chinese, Korean, French and Italian while searching travel themes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section note-section" id="planning">
+        <div class="section-heading">
+          <p class="eyebrow">Before booking</p>
+          <h2>Check the latest official details before you travel.</h2>
+          <p>
+            Opening hours, transport access, weather conditions and event dates can change. Use this site as a planning
+            starting point, then confirm time-sensitive details with official tourism sites, transport operators and
+            accommodation providers.
+          </p>
+        </div>
+        <div class="article-grid">
+          <article class="article-card">
+            <span>Season</span>
+            <h3>Match destinations to weather</h3>
+            <p>Spring flowers, summer islands, autumn leaves and winter snow routes each need different timing.</p>
+          </article>
+          <article class="article-card">
+            <span>Transport</span>
+            <h3>Leave time for rural connections</h3>
+            <p>Large cities are easy by train, but ferries, buses and mountain areas often need extra planning.</p>
+          </article>
+          <article class="article-card">
+            <span>Manners</span>
+            <h3>Respect local spaces</h3>
+            <p>Follow signs for photography, trash, smoking areas, shrine etiquette and crowded residential streets.</p>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <p>Japan Travel Guides</p>
+      <p>Independent planning content for international visitors. Verify live details before booking.</p>
+    </footer>
   </body>
 </html>
