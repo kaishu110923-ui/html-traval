@@ -4,7 +4,7 @@ HTML/CSS/JavaScriptで作ったWebサイトをまとめて置くためのリポ�
 
 ## Projects
 
-- [Japan Prefecture Travel MVP](./japan-prefecture-travel-mvp/)
+- [Japan Prefecture Travel Guide](./japan-prefecture-travel-mvp/)
 - [Fixed Cost Reset Site](./fixed-cost-reset-site/)
 
 ## Structure
